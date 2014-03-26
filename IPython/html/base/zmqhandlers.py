@@ -123,7 +123,7 @@ class ZMQStreamHandler(websocket.WebSocketHandler):
 
     def allow_draft76(self):
         """Allow draft 76, until browsers such as Safari update to RFC 6455.
-        
+
         This has been disabled by default in tornado in release 2.2.0, and
         support will be removed in later versions.
         """
@@ -144,7 +144,7 @@ class AuthenticatedZMQStreamHandler(ZMQStreamHandler, IPythonHandler):
         # Tornado 4 already does CORS checking
         if tornado.version_info[0] < 4:
             if not self.check_origin(self.get_origin()):
-                raise web.HTTPError(403)
+                self.log.warn("Cross Origin WebSocket Attempt.")
 
         self.session = Session(config=self.config)
         self.save_on_message = self.on_message
@@ -162,7 +162,7 @@ class AuthenticatedZMQStreamHandler(ZMQStreamHandler, IPythonHandler):
             self.session.session = cast_unicode(identity, 'ascii')
         except Exception:
             logging.error("First ws message didn't have the form 'identity:[cookie]' - %r", msg)
-        
+
         try:
             self.request._cookies = SimpleCookie(msg)
         except:
