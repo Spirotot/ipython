@@ -37,6 +37,7 @@ var IPython = (function (IPython) {
             type : "POST",
             data: JSON.stringify(model),
             dataType : "json",
+            timeout: 500,
             success : function (data, status, xhr) {
                 that._handle_start_success(data);
                 if (callback) {
