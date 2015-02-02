@@ -29,7 +29,6 @@ etc/fonts/conf.avail/57-dejavu-serif.conf
 etc/fonts/conf.avail/58-dejavu-lgc-sans-mono.conf
 etc/fonts/conf.avail/58-dejavu-lgc-sans.conf
 etc/fonts/conf.avail/58-dejavu-lgc-serif.conf
-etc/fonts/conf.avail/65-droid-sans-fallback.conf
 etc/fonts/conf.avail/65-droid-sans-fonts.conf
 etc/fonts/conf.d
 etc/fonts/conf.d/10-scale-bitmap-fonts.conf
@@ -55,7 +54,6 @@ etc/fonts/conf.d/58-dejavu-lgc-sans-mono.conf
 etc/fonts/conf.d/58-dejavu-lgc-sans.conf
 etc/fonts/conf.d/58-dejavu-lgc-serif.conf
 etc/fonts/conf.d/60-latin.conf
-etc/fonts/conf.d/65-droid-sans-fallback.conf
 etc/fonts/conf.d/65-fonts-persian.conf
 etc/fonts/conf.d/65-nonlatin.conf
 etc/fonts/conf.d/69-droid-sans-fallback.conf
