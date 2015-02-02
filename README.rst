@@ -2,6 +2,26 @@
  IPython: Productive Interactive Computing
 ===========================================
 
+Sandstorm specific notes
+========================
+
+To build the spk, you will have to do the following:
+
+- Create a virtualenv with a root of `/opt/virtualenv/notebook-environment2`::
+
+   $ mkdir -p /opt/virtualenv
+   $ cd /opt/virtualenv
+   $ virtualenv notebook-environment
+
+- Activate the virtualenv and install the sandstorm port of ipython::
+
+   $ source /opt/virtualenv/notebook-environment2/bin/activate
+   $ pip install https://github.com/jparyani/ipython/archive/sandstorm-2.zip
+
+- Install any other python packages you want
+
+- Run `spk pack ipython.spk` from this repository. If you get errors like "No file found to satisfy requirement", you may have to delete `sandstorm-files.list` and run `spk dev` yourself. See https://github.com/sandstorm-io/sandstorm/wiki/Porting-Guide#test-your-app-in-dev-mode for how `spk dev` works. Don't worry about importing all your python packages, unless they have dependencies on native libraries (ie. like in the case of python's lxml library links to libxml).
+
 Overview
 ========
 
