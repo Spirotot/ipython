@@ -10,7 +10,7 @@ define([
     'base/js/keyboard',
 ], function(IPython, $, utils, dialog, events, keyboard) {
     "use strict";
-    
+
     var NotebookList = function (selector, options) {
         /**
          * Constructor
@@ -532,6 +532,10 @@ define([
             icon = 'running_' + icon;
         }
         var uri_prefix = NotebookList.uri_prefixes[model.type];
+        window.open(utils.url_join_encode(
+           this.base_url,
+           uri_prefix,
+           path), '_self');
         item.find(".item_icon").addClass(icon).addClass('icon-fixed-width');
         var link = item.find("a.item_link")
             .attr('href',
