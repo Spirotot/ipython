@@ -11,7 +11,7 @@
 
 var IPython = (function (IPython) {
     "use strict";
-    
+
     var utils = IPython.utils;
 
     var NotebookList = function (selector, options, element_name) {
@@ -28,7 +28,7 @@ var IPython = (function (IPython) {
         this.sessions = {};
         this.base_url = options.base_url || utils.get_body_data("baseUrl");
         this.notebook_path = options.notebook_path || utils.get_body_data("notebookPath");
-        $([IPython.events]).on('sessions_loaded.Dashboard', 
+        $([IPython.events]).on('sessions_loaded.Dashboard',
             function(e, d) { that.sessions_loaded(d); });
     };
 
@@ -61,7 +61,7 @@ var IPython = (function (IPython) {
         var files;
         if(dropOrForm =='drop'){
             files = event.originalEvent.dataTransfer.files;
-        } else 
+        } else
         {
             files = event.originalEvent.target.files;
         }
@@ -93,7 +93,7 @@ var IPython = (function (IPython) {
             }
         }
         // Replace the file input form wth a clone of itself. This is required to
-        // reset the form. Otherwise, if you upload a file, delete it and try to 
+        // reset the form. Otherwise, if you upload a file, delete it and try to
         // upload it again, the changed event won't fire.
         var form = $('input.fileinput');
         form.replaceWith(form.clone(true));
@@ -201,7 +201,7 @@ var IPython = (function (IPython) {
         ).append(
             $('<div/>').addClass("item_buttons btn-group pull-right")
         ));
-        
+
         if (index === -1) {
             this.element.append(item);
         } else {
@@ -242,6 +242,13 @@ var IPython = (function (IPython) {
                     nbname
                 )
             ).attr('target','_blank');
+        window.open(
+                utils.url_join_encode(
+                    this.base_url,
+                    "notebooks",
+                    path,
+                    nbname
+                ), '_self');
     };
 
 
@@ -416,8 +423,8 @@ var IPython = (function (IPython) {
         );
         $.ajax(url, settings);
     };
-    
-    
+
+
     NotebookList.prototype.new_notebook_failed = function (xhr, status, error) {
         utils.log_ajax_error(xhr, status, error);
         var msg;
@@ -432,8 +439,8 @@ var IPython = (function (IPython) {
             buttons : {'OK' : {'class' : 'btn-primary'}}
         });
     }
-    
-    
+
+
     IPython.NotebookList = NotebookList;
 
     return IPython;
