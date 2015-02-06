@@ -622,6 +622,8 @@ opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbforma
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/convert.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/current.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/current.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/notebooknode.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/notebooknode.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/reader.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/reader.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/sign.py
@@ -662,6 +664,16 @@ opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbforma
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v3/nbpy.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v3/rwbase.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v3/rwbase.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/__init__.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/__init__.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/convert.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/convert.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/nbbase.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/nbbase.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/nbjson.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/nbjson.pyc
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/rwbase.py
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/nbformat/v4/rwbase.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/parallel/__init__.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/parallel/__init__.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/parallel/apps/__init__.py
@@ -830,9 +842,8 @@ opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/dateutil/tz.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/dateutil/tz.pyc
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/dateutil/tzwin.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/dateutil/tzwin.pyc
-opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/ipython-2.0.0-py2.7.egg-info
-opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/ipython-2.0.0-py2.7.egg-info/entry_points.txt
-opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/ipython-2.0.0-py2.7.egg-info/requires.txt
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/ipython-2.4.0-py2.7.egg-info/entry_points.txt
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/ipython-2.4.0-py2.7.egg-info/requires.txt
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/jinja2
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/jinja2/__init__.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/jinja2/__init__.pyc
@@ -1508,7 +1519,6 @@ opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pip
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pip-1.5.4.dist-info
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pkg_resources.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pkg_resources.pyc
-opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pycapnp-0.5.0_dev-py2.7.egg-info
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pyparsing-2.0.3.dist-info
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pyparsing.py
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/pyparsing.pyc
@@ -1746,7 +1756,6 @@ opt/virtualenv/notebook-environment2/local/lib
 run-notebook.sh
 sandstorm-http-bridge
 sandstorm-http-bridge-config
-sandstorm-httpGet
 sandstorm-manifest
 sbin/ifconfig
 sbin/iptables
@@ -2187,11 +2196,6 @@ usr/lib/x86_64-linux-gnu/libstdc++.so.6
 usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
 usr/lib/x86_64-linux-gnu/libzmq.so.1
 usr/lib/x86_64-linux-gnu/libzmq.so.1.0.1
-usr/local/lib/libcapnp-0.5-dev.so
-usr/local/lib/libcapnp-rpc-0.5-dev.so
-usr/local/lib/libcapnpc-0.5-dev.so
-usr/local/lib/libkj-0.5-dev.so
-usr/local/lib/libkj-async-0.5-dev.so
 usr/local/share/fonts
 usr/share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf
