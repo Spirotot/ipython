@@ -11,9 +11,9 @@
 
 var IPython = (function (IPython) {
     "use strict";
-    
+
     var utils = IPython.utils;
-    
+
     var Session = function(notebook, options){
         this.kernel = null;
         this.id = null;
@@ -22,7 +22,7 @@ var IPython = (function (IPython) {
         this.path = notebook.notebook_path;
         this.base_url = notebook.base_url;
     };
-    
+
     Session.prototype.start = function(callback) {
         var that = this;
         var model = {
@@ -44,12 +44,14 @@ var IPython = (function (IPython) {
                     callback(data, status, xhr);
                 }
             },
-            error : utils.log_ajax_error,
         };
         var url = utils.url_join_encode(this.base_url, 'api/sessions');
+        settings.error = function (err) {
+            $.ajax(url, settings);
+        };
         $.ajax(url, settings);
     };
-    
+
     Session.prototype.rename_notebook = function (name, path) {
         this.name = name;
         this.path = path;
@@ -70,7 +72,7 @@ var IPython = (function (IPython) {
         var url = utils.url_join_encode(this.base_url, 'api/sessions', this.id);
         $.ajax(url, settings);
     };
-    
+
     Session.prototype.delete = function() {
         var settings = {
             processData : false,
@@ -83,11 +85,11 @@ var IPython = (function (IPython) {
         var url = utils.url_join_encode(this.base_url, 'api/sessions', this.id);
         $.ajax(url, settings);
     };
-    
+
     // Kernel related things
     /**
      * Create the Kernel object associated with this Session.
-     * 
+     *
      * @method _handle_start_success
      */
     Session.prototype._handle_start_success = function (data, status, xhr) {
@@ -96,25 +98,25 @@ var IPython = (function (IPython) {
         this.kernel = new IPython.Kernel(kernel_service_url);
         this.kernel._kernel_started(data.kernel);
     };
-    
+
     /**
      * Prompt the user to restart the IPython kernel.
-     * 
+     *
      * @method restart_kernel
      */
     Session.prototype.restart_kernel = function () {
         this.kernel.restart();
     };
-    
+
     Session.prototype.interrupt_kernel = function() {
         this.kernel.interrupt();
     };
-    
+
 
     Session.prototype.kill_kernel = function() {
         this.kernel.kill();
     };
-    
+
     IPython.Session = Session;
 
     return IPython;
