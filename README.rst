@@ -16,7 +16,7 @@ To build the spk, you will have to do the following:
 - Activate the virtualenv and install the sandstorm port of ipython::
 
    $ source /opt/virtualenv/notebook-environment2/bin/activate
-   $ pip install https://github.com/jparyani/ipython/archive/sandstorm-2.zip
+   $ pip install https://github.com/jparyani/ipython/archive/sandstorm.zip
 
 - Install any other python packages you want
 
