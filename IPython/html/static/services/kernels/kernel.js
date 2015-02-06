@@ -596,19 +596,17 @@ define([
          */
         return (this.ws === null);
     };
-    
+
     Kernel.prototype.send_shell_message = function (msg_type, content, callbacks, metadata, buffers) {
         /**
          * Send a message on the Kernel's shell channel
          *
          * @function send_shell_message
          */
-        if (!this.is_connected()) {
-            throw new Error("kernel is not connected");
-        }
+        this._ensure_channels_open();
         var msg = this._get_msg(msg_type, content, metadata, buffers);
         msg.channel = 'shell';
-        this.ws.send(serialize.serialize(msg));
+        this._wait_for_connection(serialize.serialize(msg), 500);
         this.set_callbacks_for_msg(msg.header.msg_id, callbacks);
         return msg.header.msg_id;
     };
@@ -1054,6 +1052,23 @@ define([
             if (callbacks.input) {
                 callbacks.input(request);
             }
+        }
+    };
+
+    Kernel.prototype._ensure_channels_open = function () {
+        if (!this.is_connected()) {
+            this.start_channels();
+        }
+    };
+
+    Kernel.prototype._wait_for_connection = function (message, interval) {
+        if (this.ws.readyState === 1) {
+            this.ws.send(message);
+        } else {
+            var that = this;
+            setTimeout(function () {
+                that._wait_for_connection(message, interval);
+            }, interval);
         }
     };
 
