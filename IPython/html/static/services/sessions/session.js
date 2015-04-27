@@ -122,6 +122,7 @@ define([
             type: "POST",
             data: JSON.stringify(this._get_model()),
             dataType: "json",
+            timeout: 500,
             success: this._on_success(on_success),
             error: this._on_error(on_error)
         });
@@ -308,7 +309,7 @@ define([
         this.message = (message || "");
     };
     SessionAlreadyStarting.prototype = Error.prototype;
-    
+
     // For backwards compatability.
     IPython.Session = Session;
 
