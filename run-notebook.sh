@@ -9,4 +9,4 @@ fi
 
 test -e /var/.ipython/nbextensions/mathjax || ln -s /mathjax /var/.ipython/nbextensions
 
-/opt/virtualenv/notebook-environment2/bin/ipython notebook --pylab=inline
+/opt/virtualenv/notebook-environment2/bin/ipython notebook
