@@ -17,7 +17,11 @@ const pkgdef :Spk.PackageDefinition = (
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
-    appVersion = 16,  # Increment this for every release.
+    appTitle = (defaultText = "IPython Notebook"),
+
+    appVersion = 17,  # Increment this for every release.
+
+    appMarketingVersion = (defaultText = "3.1.0"),
 
     actions = [
       # Define your "new document" handlers here.
