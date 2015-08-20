@@ -19,24 +19,54 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "IPython Notebook"),
 
-    appVersion = 17,  # Increment this for every release.
+    appVersion = 18,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "3.1.0"),
 
     actions = [
       # Define your "new document" handlers here.
       ( title = (defaultText = "New IPython Notebook"),
+        nounPhrase = (defaultText = "notebook"),
         command = .myCommand
         # The command to run when starting for the first time. (".myCommand"
         # is just a constant defined at the bottom of the file.)
       )
     ],
 
-    continueCommand = .myCommand
+    continueCommand = .myCommand,
     # This is the command called to start your app back up after it has been
     # shut down for inactivity. Here we're using the same command as for
     # starting a new instance, but you could use different commands for each
     # case.
+    metadata = (
+      icons = (
+        appGrid = (png = (
+          dpi1x = embed "app-graphics/ipython-128.png"
+        )),
+        grain = (svg = ( embed "app-graphics/ipython-24.svg")),
+        market =  (png = (
+          dpi1x = embed "app-graphics/ipython-150.png"
+        )),
+      ),
+
+      website = "https://ipython.org/",
+      codeUrl = "https://github.com/jparyani/ipython",
+      license = (openSource = bsd3Clause),
+      categories = [developerTools, science],
+
+      author = (
+        contactEmail = "jparyani@sandstorm.io",
+        pgpSignature = embed "pgp-signature",
+        upstreamAuthor = "IPython Team",
+      ),
+      pgpKeyring = embed "pgp-keyring",
+
+      description = (defaultText = embed "description.md"),
+
+      screenshots = [
+        (width = 448, height = 358, png = embed "sandstorm-screenshot.png")
+      ],
+    ),
   ),
 
   sourceMap = (

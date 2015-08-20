@@ -482,6 +482,7 @@ opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/st
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/codemirror/mode/xml/xml.js
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/es6-promise/promise.min.js
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/font-awesome/fonts/fontawesome-webfont.woff
+opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/font-awesome/fonts/fontawesome-webfont.woff2
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/google-caja/html-css-sanitizer-minified.js
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/jquery-ui/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png
 opt/virtualenv/notebook-environment2/lib/python2.7/site-packages/IPython/html/static/components/jquery-ui/themes/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png
