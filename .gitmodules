@@ -1,6 +1,0 @@
-[submodule "components"]
-	path = IPython/html/static/components
-	url = https://github.com/ipython/ipython-components.git
-[submodule "mathjax"]
-	path = mathjax
-	url = https://github.com/mathjax/MathJax.git
