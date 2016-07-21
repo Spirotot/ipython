@@ -14,9 +14,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "IPython Notebook"),
 
-    appVersion = 18,  # Increment this for every release.
+    appVersion = 19,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "3.1.0"),
+    appMarketingVersion = (defaultText = "4.2.1"),
 
     actions = [
       # Define your "new document" handlers here.
@@ -51,10 +51,10 @@ const pkgdef :Spk.PackageDefinition = (
 
       author = (
         contactEmail = "jparyani@sandstorm.io",
-#        pgpSignature = embed "pgp-signature",
+       pgpSignature = embed "pgp-signature",
         upstreamAuthor = "IPython Team",
       ),
-#      pgpKeyring = embed "pgp-keyring",
+     pgpKeyring = embed "pgp-keyring",
 
       description = (defaultText = embed "description.md"),
 
