@@ -77,8 +77,13 @@ const pkgdef :Spk.PackageDefinition = (
   # `spk dev` will write a list of all the files your app uses to this file.
   # You should review it later, before shipping your app.
 
-  alwaysInclude = ["usr/local/lib/python2.7",
-                   "usr/lib/python2.7"]
+  alwaysInclude = [
+                   "usr/local/lib/python2.7",
+                   "usr/lib/python2.7",
+                   "usr/local/lib/python2.7",
+                   "usr/lib/python2.7",
+                   "opt/sandstorm/latest/usr/include",
+                  ],
 
 );
 
