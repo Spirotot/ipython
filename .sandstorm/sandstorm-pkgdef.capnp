@@ -14,7 +14,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "IPython Notebook"),
 
-    appVersion = 19,  # Increment this for every release.
+    appVersion = 20,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "4.2.1"),
 
