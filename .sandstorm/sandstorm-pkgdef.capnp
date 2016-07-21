@@ -51,12 +51,13 @@ const pkgdef :Spk.PackageDefinition = (
 
       author = (
         contactEmail = "jparyani@sandstorm.io",
-       pgpSignature = embed "pgp-signature",
+        pgpSignature = embed "pgp-signature",
         upstreamAuthor = "IPython Team",
       ),
-     pgpKeyring = embed "pgp-keyring",
+      pgpKeyring = embed "pgp-keyring",
 
       description = (defaultText = embed "description.md"),
+      shortDescription = (defaultText = "Computation environment"),
 
       screenshots = [
         (width = 448, height = 358, png = embed "sandstorm-screenshot.png")
