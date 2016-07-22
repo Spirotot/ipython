@@ -26,7 +26,7 @@ pip install cython
 pip install ipython jupyter pandas pycapnp beautifulsoup4
 
 pip3 install cython
-pip3 install ipython pandas pycapnp beautifulsoup4
+pip3 install ipython ipykernel pandas pycapnp beautifulsoup4
 python3 -m ipykernel install
 
 exit 0
