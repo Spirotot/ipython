@@ -81,8 +81,12 @@ const pkgdef :Spk.PackageDefinition = (
   alwaysInclude = [
                    "usr/local/lib/python2.7",
                    "usr/lib/python2.7",
-                   "usr/local/lib/python2.7",
-                   "usr/lib/python2.7",
+                   "usr/lib/pymodules",
+                   "usr/lib/pyshared",
+                   "usr/lib/python-tz",
+                   "usr/local/lib/python3.4",
+                   "usr/lib/python3.4",
+                   "usr/lib/python3",
                    "opt/sandstorm/latest/usr/include",
                   ],
 
