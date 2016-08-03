@@ -14,9 +14,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "IPython Notebook"),
 
-    appVersion = 23,  # Increment this for every release.
+    appVersion = 24,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "4.2.1"),
+    appMarketingVersion = (defaultText = "4.2.2"),
 
     actions = [
       # Define your "new document" handlers here.
