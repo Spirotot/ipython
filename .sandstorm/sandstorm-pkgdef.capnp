@@ -4,7 +4,7 @@ using Spk = import "/sandstorm/package.capnp";
 
 const pkgdef :Spk.PackageDefinition = (
 
-  id = "rprqf3t2h3vd3swfkhwk076qrennh9msreyjv70g7sgw5hkdxjph",
+  id = "cxp85aey2qrdqvxja1zgrs0tyzq7s55qwqdwqgz12k036s3rc1yh",
   # Your app ID is actually its public key. The private key was placed in
   # your keyring. All updates must be signed with the same key.
 
@@ -12,15 +12,15 @@ const pkgdef :Spk.PackageDefinition = (
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
-    appTitle = (defaultText = "IPython Notebook"),
+    appTitle = (defaultText = "Eye of Jupyter"),
 
-    appVersion = 24,  # Increment this for every release.
+    appVersion = 1,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "4.2.2"),
 
     actions = [
       # Define your "new document" handlers here.
-      ( title = (defaultText = "New IPython Notebook"),
+      ( title = (defaultText = "New Angr Notebook"),
         nounPhrase = (defaultText = "project"),
         command = .myCommand
         # The command to run when starting for the first time. (".myCommand"
@@ -45,14 +45,14 @@ const pkgdef :Spk.PackageDefinition = (
       ),
 
       website = "https://ipython.org/",
-      codeUrl = "https://github.com/jparyani/ipython",
+      codeUrl = "https://github.com/Spirotot/ipython",
       license = (openSource = bsd3Clause),
       categories = [developerTools, science],
 
       author = (
-        contactEmail = "jparyani@sandstorm.io",
+        contactEmail = "spirotot@gmail.com",
         pgpSignature = embed "pgp-signature",
-        upstreamAuthor = "IPython Team",
+        upstreamAuthor = "Sandstorm Team",
       ),
       pgpKeyring = embed "pgp-keyring",
 
