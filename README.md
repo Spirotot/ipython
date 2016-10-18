@@ -4,6 +4,12 @@ Background is here: https://blog.spirotot.com/2016/09/22/eye-of-jupyter/
 
 Signed Sandstorm SPK [here](https://owncloud.spirotot.com/index.php/s/RU0buxiKFqsZByg)(~200MB).
 
+## Known Issues
+
+* For large binaries/analyses, the PyPy kernel will timeout. Not sure if this is
+  due to lack of RAM, PyPy limitations, or Jupyter. Need to do more
+  testing/troubleshooting.
+
 Original README is below.
 
 # Sandstorm package for IPython Notebook
