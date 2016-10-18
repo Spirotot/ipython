@@ -12,7 +12,7 @@ const pkgdef :Spk.PackageDefinition = (
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
-    appTitle = (defaultText = "Eye of Jupyter"),
+    appTitle = (defaultText = "Angr Binary Reverse-Engineering"),
 
     appVersion = 1,  # Increment this for every release.
 
@@ -57,7 +57,7 @@ const pkgdef :Spk.PackageDefinition = (
       pgpKeyring = embed "pgp-keyring",
 
       description = (defaultText = embed "description.md"),
-      shortDescription = (defaultText = "Computation environment"),
+      shortDescription = (defaultText = "Angr reversing in Jupyter"),
 
       screenshots = [
         (width = 448, height = 358, png = embed "sandstorm-screenshot.png")
